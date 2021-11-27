@@ -6,3 +6,4 @@ print(n)
 
 b = sum([int(c) for c in str(n)])
 print(b)
+
