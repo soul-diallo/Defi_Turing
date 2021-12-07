@@ -3,22 +3,19 @@ import math
 
 
 def isPrime(n):
-    flag = False
     if n <= 3:
         return True
-    for i in range(2, int(n**0.5)+1, 2):
-        if n % i != 0:
-            flag = True
-        else:
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        if n % i == 0:
             return False
-    return flag
+
+    return True
 
 
 somme = 0
-for i in range(2,10):
-    if isPrime(i):
-
+nbr = bool
+for i in range(3, 10000000, 2):
+    nbr = isPrime(i)
+    if nbr == True:
         somme = somme + i
-        print(i)
-        #print(somme)
-print(somme)
+print(somme + 2)
